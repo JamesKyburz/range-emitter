@@ -1,0 +1,18 @@
+message Publish {
+  required bytes key = 2;
+}
+
+message Subscribe {
+  required Range range = 2;
+}
+
+message Unsubscribe {
+  required Range range = 2;
+}
+
+message Range {
+  optional bytes gt = 1;
+  optional bytes gte = 2;
+  optional bytes lt = 3;
+  optional bytes lte = 4;
+}
