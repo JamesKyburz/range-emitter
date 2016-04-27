@@ -7,10 +7,18 @@ var serverStream = server.connect()
 
 clientStream.pipe(serverStream).pipe(clientStream)
 
-client.subscribe({ lt: 5, gte: 1 }, (key) => {
-  console.log('match key is %s', key)
+client.subscribe({ gte: '5' }, (key, type) => {
+  console.log('match any key is %s', key, type)
 })
-    //client.unsubscribe({ lt: '5', gte: '2' })
+//client.subscribe({ gte: '3', lte: '5' }, (key) => {
+//  console.log('match key is %s', key)
+//})
+//
+//client.subscribe({ gte: '0', lte: '7' }, (key) => {
+//  console.log('match key is %s', key)
+//})
+//
+//client.unsubscribe({ gte: '0', lte: '7' })
 
 process.nextTick(function () {
   console.log('server has 3?', server.subscriptionExists(3))
@@ -19,10 +27,11 @@ process.nextTick(function () {
 
   process.nextTick(function () {
     ;['7', '0', '1', '2', '3', '4', '5', '6'].forEach(function (i) {
-      server.publish(i)
+      if (client.subscriptionExists(i)) {
+        //server.publish(i, { put: true })
+        server.publish(i, 'put')
+      }
     })
-    ;['7', '0', '1', '2', '3', '4', '5', '6'].forEach(function (i) {
-      server.publish(i)
-    })
+    server.publish('8', 'del')
   })
 })

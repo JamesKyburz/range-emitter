@@ -1,18 +1,19 @@
 message Publish {
-  required bytes key = 2;
+  required string key = 1;
+  required string type = 2;
 }
 
 message Subscribe {
-  required Range range = 2;
+  required Range range = 1;
 }
 
 message Unsubscribe {
-  required Range range = 2;
+  required Range range = 1;
 }
 
 message Range {
-  optional bytes gt = 1;
-  optional bytes gte = 2;
-  optional bytes lt = 3;
-  optional bytes lte = 4;
+  optional string gt = 1;
+  optional string gte = 2;
+  optional string lt = 3;
+  optional string lte = 4;
 }
