@@ -25,8 +25,13 @@ function Ranges () {
 }
 
 Ranges.prototype.subscribe = function (range, cb, resend) {
+  if (typeof range === 'string') range = { lte: range, gte: range }
+  if (typeof range === 'function') {
+    resend = cb
+    cb = range
+    range = { lte: '*', gte: '*' }
+  }
   if (!resend) {
-    if (typeof range === 'string') range = { lte: range, gte: range }
     this._addSubscription(range, cb)
   }
   this._write({

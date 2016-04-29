@@ -1,21 +1,48 @@
 {
   "name": "range-emitter",
-  "dependencies": {
-    "brfs": "1.4.3",
-    "duplexify": "^3.4.3",
-    "end-of-stream": "^1.1.0",
-    "length-prefixed-stream": "^1.5.0",
-    "level-codec": "^6.2.0",
-    "ltgt": "^2.1.2",
-    "numeric-id-map": "^1.1.0",
-    "protocol-buffers": "^3.1.6"
+  "description": "range emitter",
+  "keywords": [
+    "leveldb",
+    "levelup",
+    "ltgt",
+    "range",
+    "protocol",
+    "buffers",
+    "rpc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jameskyburz/range-emitter.git"
+  },
+  "author": {
+    "name": "James Kyburz",
+    "email": "james.kyburz@gmail.com"
+  },
+  "main": "index.js",
+  "version": "1.0.0",
+  "scripts": {
+    "prepublish": "standard"
   },
   "browserify": {
     "transform": [
       "brfs"
     ]
   },
+  "dependencies": {
+    "brfs": "1.4.3",
+    "duplexify": "3.4.3",
+    "end-of-stream": "1.1.0",
+    "length-prefixed-stream": "1.5.0",
+    "ltgt": "2.1.2",
+    "protocol-buffers": "3.1.6"
+  },
   "devDependencies": {
     "standard": "6.0.8"
-  }
+  },
+  "standard": {
+    "ignore": [
+      "test.js"
+    ]
+  },
+  "license": "MIT"
 }
