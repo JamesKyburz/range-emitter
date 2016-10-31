@@ -1,37 +1,54 @@
+var test = require('tape')
 var Emitter = require('./')
-var client = Emitter()
-var server = Emitter()
 
-var clientStream = client.connect()
-var serverStream = server.connect()
+function setup(cb) {
+  var client = Emitter()
+  var server = Emitter()
 
-clientStream.pipe(serverStream).pipe(clientStream)
+  var clientStream = client.connect()
+  var serverStream = server.connect()
 
-client.subscribe({ gte: '5' }, (key, type) => {
-  console.log('match any key is %s', key, type)
-})
-//client.subscribe({ gte: '3', lte: '5' }, (key) => {
-//  console.log('match key is %s', key)
-//})
-//
-//client.subscribe({ gte: '0', lte: '7' }, (key) => {
-//  console.log('match key is %s', key)
-//})
-//
-//client.unsubscribe({ gte: '0', lte: '7' })
+  clientStream.pipe(serverStream).pipe(clientStream)
+  cb(client, server)
+}
 
-process.nextTick(function () {
-  console.log('server has 3?', server.subscriptionExists(3))
-  console.log('server has 4?', server.subscriptionExists(4))
-  console.log('server has 5?', server.subscriptionExists(5))
-
-  process.nextTick(function () {
-    ;['7', '0', '1', '2', '3', '4', '5', '6'].forEach(function (i) {
-      if (client.subscriptionExists(i)) {
-        //server.publish(i, { put: true })
-        server.publish(i, 'put')
-      }
+test('should setup subscription', function (t) {
+  t.plan(1)
+  setup(function (client, server) {
+    client.subscribe({ gte: '5' })
+    process.nextTick(function () {
+      t.equal(server.subscriptionExists(5), true)
     })
-    server.publish('8', 'del')
+  })
+})
+
+test('should match any key', function (t) {
+  t.plan(1)
+  setup(function (client, server) {
+    client.subscribe((key, type) => {
+      t.equal(key, 'any')
+    })
+    server.publish('any', 'put')
+  })
+})
+
+test('should match key equal to 5', function (t) {
+  t.plan(1)
+  setup(function (client, server) {
+    client.subscribe({ gte: '5' }, (key, type) => {
+      t.equal(key, '5')
+    })
+    server.publish('5', 'put')
+  })
+})
+
+test('should not match key less than 5', function (t) {
+  t.plan(1)
+  setup(function (client, server) {
+    client.subscribe({ gte: '5' }, (key, type) => {
+      t.equal(key, '5')
+    })
+    server.publish('3', 'put')
+    server.publish('5', 'put')
   })
 })
