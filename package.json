@@ -22,7 +22,10 @@
   "version": "1.0.2",
   "scripts": {
     "prepublish": "standard",
-    "test": "tape test.js | tap-spec"
+    "preversion": "standard",
+    "pretest": "standard",
+    "test": "tape test.js | tap-spec",
+    "test-browsers": "remove-saucelabs-jobs-by-build && zuul test.js"
   },
   "browserify": {
     "transform": [
@@ -38,9 +41,12 @@
     "protocol-buffers": "3.1.6"
   },
   "devDependencies": {
+    "babel-preset-es2015": "6.18.0",
+    "babelify": "7.3.0",
     "standard": "8.4.0",
     "tap-spec": "4.1.1",
-    "tape": "4.6.2"
+    "tape": "4.6.2",
+    "zuul": "3.11.1"
   },
   "standard": {
     "ignore": [

@@ -6,6 +6,10 @@ Inspired by [multileveldown]
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+[![build status](https://api.travis-ci.org/JamesKyburz/range-emitter.svg)](https://travis-ci.org/JamesKyburz/gauge-progress)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/range-emitter.svg)](https://saucelabs.com/u/gauge-progress)
+
 # methods
 
 ```javascript
