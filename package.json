@@ -46,7 +46,8 @@
     "standard": "8.4.0",
     "tap-spec": "4.1.1",
     "tape": "4.6.2",
-    "zuul": "3.11.1"
+    "zuul": "3.11.1",
+    "zuul-ngrok": "4.0.0"
   },
   "standard": {
     "ignore": [
