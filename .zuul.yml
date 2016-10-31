@@ -1,0 +1,26 @@
+ui: tape
+capabilities:
+  record-video: false
+  video-upload-on-pass: false
+  record-screenshots: false
+concurrency: 2
+tunnel:
+  type: ngrok
+  bind_tls: true
+browserify:
+  - transform: babelify
+browsers:
+  - name: microsoftedge
+    version: latest
+  - name: firefox
+    version: latest
+  - name: safari
+    version: latest
+  - name: chrome
+    version: latest
+  - name: opera
+    version: latest
+  - name: iphone
+    version: latest
+  - name: android
+    version: latest
