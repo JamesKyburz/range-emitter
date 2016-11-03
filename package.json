@@ -38,7 +38,7 @@
     "end-of-stream": "1.1.0",
     "length-prefixed-stream": "1.5.0",
     "ltgt": "2.1.2",
-    "protocol-buffers": "3.1.6"
+    "protocol-buffers": "3.1.7"
   },
   "devDependencies": {
     "remove-saucelabs-jobs-by-build": "1.0.14",
