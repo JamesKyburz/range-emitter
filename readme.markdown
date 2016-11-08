@@ -10,7 +10,7 @@ Inspired by [multileveldown]
 [![npm](https://img.shields.io/npm/v/range-emitter.svg)](https://npmjs.org/package/range-emitter)
 [![downloads](https://img.shields.io/npm/dm/range-emitter.svg)](https://npmjs.org/package/range-emitter)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/range-emitter.svg)](https://saucelabs.com/u/gauge-progress)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/range-emitter.svg)](https://saucelabs.com/u/range-emitter)
 
 # methods
 
