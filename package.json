@@ -46,7 +46,7 @@
     "babelify": "7.3.0",
     "standard": "8.5.0",
     "tap-spec": "4.1.1",
-    "tape": "4.6.2",
+    "tape": "4.6.3",
     "zuul": "3.11.1",
     "zuul-ngrok": "4.0.0"
   },
