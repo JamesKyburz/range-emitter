@@ -7,8 +7,6 @@ concurrency: 2
 tunnel:
   type: ngrok
   bind_tls: true
-browserify:
-  - transform: babelify
 browsers:
   - name: microsoftedge
     version: latest
