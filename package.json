@@ -41,7 +41,7 @@
     "protocol-buffers": "3.2.1"
   },
   "devDependencies": {
-    "remove-saucelabs-jobs-by-build": "1.0.18",
+    "remove-saucelabs-jobs-by-build": "1.0.19",
     "standard": "9.0.2",
     "tap-spec": "4.1.1",
     "tape": "4.6.3",
