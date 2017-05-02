@@ -1,16 +1,14 @@
 # range-emitter
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/range-emitter.svg)](https://greenkeeper.io/)
-
 range emitter using [levelup] ranges.
 
 Inspired by [multileveldown]
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
+[![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/feross/standard)
 [![build status](https://api.travis-ci.org/JamesKyburz/range-emitter.svg)](https://travis-ci.org/JamesKyburz/range-emitter)
 [![npm](https://img.shields.io/npm/v/range-emitter.svg)](https://npmjs.org/package/range-emitter)
 [![downloads](https://img.shields.io/npm/dm/range-emitter.svg)](https://npmjs.org/package/range-emitter)
+[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/range-emitter.svg)](https://greenkeeper.io/)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/range-emitter.svg)](https://saucelabs.com/u/range-emitter)
 
