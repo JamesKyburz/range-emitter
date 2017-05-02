@@ -1,5 +1,7 @@
 # range-emitter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/range-emitter.svg)](https://greenkeeper.io/)
+
 range emitter using [levelup] ranges.
 
 Inspired by [multileveldown]
