@@ -138,7 +138,7 @@ Ranges.prototype._removeSubscription = function (range) {
 
 Ranges.prototype._write = function (req) {
   var enc = ENCODERS[req.message]
-  var buf = new Buffer(enc.encodingLength(req) + 1)
+  var buf = Buffer.alloc(enc.encodingLength(req) + 1)
   buf[0] = req.message.charCodeAt(0)
   enc.encode(req, buf, 1)
   this._encode.write(buf)
