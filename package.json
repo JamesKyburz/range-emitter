@@ -33,19 +33,19 @@
     ]
   },
   "dependencies": {
-    "brfs": "1.4.3",
-    "duplexify": "3.5.0",
-    "end-of-stream": "1.4.0",
-    "length-prefixed-stream": "1.5.1",
-    "ltgt": "2.2.0",
-    "protocol-buffers": "3.2.1"
+    "brfs": "2.0.1",
+    "duplexify": "3.6.1",
+    "end-of-stream": "1.4.1",
+    "length-prefixed-stream": "1.6.0",
+    "ltgt": "2.2.1",
+    "protocol-buffers": "4.1.0"
   },
   "devDependencies": {
-    "remove-saucelabs-jobs-by-build": "1.0.19",
-    "standard": "10.0.2",
-    "tap-spec": "4.1.1",
-    "tape": "4.6.3",
-    "zuul": "3.11.1",
+    "remove-saucelabs-jobs-by-build": "1.0.20",
+    "standard": "12.0.1",
+    "tap-spec": "5.0.0",
+    "tape": "4.9.1",
+    "zuul": "3.12.0",
     "zuul-ngrok": "4.0.0"
   },
   "standard": {
